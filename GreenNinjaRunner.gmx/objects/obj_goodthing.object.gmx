@@ -50,7 +50,7 @@
             <kind>1</kind>
             <string>instance_destroy()
 obj_hud.good++
-
+score++
 scr_create_floating_number("+1 Good Thing",c_lime,x,y-64)
 </string>
           </argument>

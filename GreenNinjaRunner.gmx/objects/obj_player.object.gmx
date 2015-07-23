@@ -49,16 +49,17 @@
           <argument>
             <kind>1</kind>
             <string>view_yview[0] = y/2 - view_hview[0]/4
+background_y[0] = view_yview[0]
 if !collision_line(x-16,y+sprite_height/2,x+16,y+sprite_height/2,obj_platform,0,1)
     {
     
-    gravity = 1
+    gravity = 2
     if keyboard_check(vk_up)
         {
-        motion_add(90,.3)
+        motion_add(90,.6)
         }
     if sprite_index = spr_green_ninja_sliding
-    motion_add(90,.5)
+    motion_add(90,1)
     }
 else
     {
@@ -68,7 +69,7 @@ else
         }
     if keyboard_check(vk_up)
         {
-        vspeed = -24
+        vspeed = -32 //24
         }
     else
         {
@@ -79,15 +80,19 @@ else
     
     }
 repeat(60)
-    if collision_line(x-16,y+sprite_height/2+1,x+16,y+sprite_height/2+1,obj_platform,0,1)
-        {
-        y -= 1
-        }
-    
+if collision_line(x-16,y+sprite_height/2+1,x+16,y+sprite_height/2+1,obj_platform,0,1)
+    {
+    y -= 1
+    }
+
 scr_game_end()
 
+score++
 if y &gt; room_height
-game_restart()
+    {
+    score = 0
+    game_restart()
+    }
 
 if keyboard_check(ord("Z"))   
     {
