@@ -165,8 +165,8 @@
     <object>objects\obj_player</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_init</room>
     <room>rooms\room0</room>
+    <room>rooms\rm_init</room>
     <room>rooms\rm_main</room>
   </rooms>
   <constants number="13">
