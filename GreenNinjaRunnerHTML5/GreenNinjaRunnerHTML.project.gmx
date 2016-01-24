@@ -50,6 +50,7 @@
     <sprite>sprites\spr_badthing</sprite>
     <sprite>sprites\spr_goodthing</sprite>
     <sprite>sprites\spr_green_ninja_running</sprite>
+    <sprite>sprites\spr_green_ninja_punching</sprite>
     <sprite>sprites\spr_green_ninja_sliding</sprite>
     <sprite>sprites\spr_platform</sprite>
   </sprites>

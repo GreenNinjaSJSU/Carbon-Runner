@@ -48,10 +48,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy()
-obj_hud.bad++
+            <string>
+instance_destroy()
 
+if other.sprite_index != spr_green_ninja_punching
+{
+obj_hud.bad++
 scr_create_floating_number("+1 Bad Thing",c_red,x,y-64)
+}
+else
+{
+scr_create_floating_number("XP +1",c_lime,x,y-64)
+}
 </string>
           </argument>
         </arguments>
